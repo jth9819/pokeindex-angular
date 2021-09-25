@@ -1,0 +1,23 @@
+.last-section {
+    display: flex;
+    flex-direction: column;
+    min-height: 55vh;
+}
+
+.last-section .container a {
+    color: #4b6584;
+}
+
+.last-section a:hover {
+    color: grey;
+}
+
+.card {
+    margin: 20px auto 0;
+    float: none;
+}
+
+.card-body a {
+    margin-right: 10px;
+}
+

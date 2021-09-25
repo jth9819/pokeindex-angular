@@ -1,0 +1,68 @@
+<!-- Header -->
+<header>
+    <!-- Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <!-- Icon/Name -->
+        <a class="navbar-brand" [routerLink]="['']"><img src="assets/img/pokeball-icon.png" alt="Pokeball icon"
+                width="30px" height="30px">&nbsp;&nbsp;PokeIndex</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+                <!-- Pokemon Dropdown -->
+                <li class="nav-item dropdown">
+                    <div class="col">
+                        <div ngbDropdown class="d-inline-block">
+                            <button class="btn" id="dropdownBasic1" ngbDropdownToggle>Pokemon</button>
+                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                <button class="dropdown-item btn btn-secondary" id="search-button" ngbDropdownItem
+                                    [routerLink]="['search']">Search</button>
+                                <button class="dropdown-item btn btn-secondary" id="list-button" ngbDropdownItem
+                                    [routerLink]="['browse']">Browse</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- About -->
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['about']">About</a>
+                </li>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <!--
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['team']">Team</a>
+                </li>
+                -->
+            </ul>
+
+            <div *ngIf="userService.user$ | async; then authenticated else guest">
+                <!-- placeholder for ng-template -->
+            </div>
+
+            <!-- Logged out -->
+            <ng-template #guest>
+                <ul class="nav navbar-nav navbar-right">
+                    <li style="align-content:center">
+                        <button (click)="userService.googleSignin()" class="btn btn-dark">Login</button>
+                    </li>
+                </ul>
+            </ng-template>
+
+            <!-- Logged in -->
+            <ng-template #authenticated>
+                <ul class="nav navbar-nav navbar-right">
+                    <li style="align-content:center">
+                        <button (click)="userService.signOut()" class="btn btn-dark">Logout</button>
+                    </li>
+                </ul>
+            </ng-template>
+
+        </div>
+    </nav>
+</header>

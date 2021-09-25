@@ -1,0 +1,16 @@
+#dream_sprite {
+    width: 270px;
+    height: 270px;
+}
+
+#default_sprite {
+    width: 230px;
+    height: 230px;
+}
+
+hr {
+    width: 58%;
+    display: block;
+    margin: auto;
+    flex-shrink: 0;
+}

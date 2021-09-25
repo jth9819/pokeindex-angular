@@ -1,0 +1,13 @@
+footer {
+    display: block;
+    margin: auto;
+    flex-shrink: 0;
+}   
+
+footer .row {
+    margin-left: 12%;
+}
+
+footer img {
+    margin-bottom: 6px;
+}

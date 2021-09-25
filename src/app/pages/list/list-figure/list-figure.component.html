@@ -1,0 +1,41 @@
+<!-- Browse pokemon list -->
+<div class="pokemon-grid">
+    <div class="box"
+        *ngFor="let pokemon of pokemon | paginate: { itemsPerPage: 12, currentPage: page, totalItems: totalPokemon }">
+        <!-- Image -->
+        <img [src]="pokemon.sprites.front_default" alt="Pokemon">
+        <!-- Name -->
+        <h3>{{ pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1) }}</h3>
+        <p>
+            <!-- Type -->
+            <b>Type:</b>
+            {{ pokemon.types[0].type.name.charAt(0).toUpperCase() + pokemon.types[0].type.name.slice(1) }}
+        </p>
+        <p>
+            <!-- Height -->
+            <b>Height:</b> {{ pokemon.height }}
+        </p>
+        <p>
+            <!-- Health -->
+            <b>Health:</b> {{ pokemon.stats[0].base_stat }}
+        </p>
+        <p>
+            <!-- Att. Power -->
+            <b>Attack Power:</b> {{ pokemon.stats[1].base_stat }}
+        </p>
+
+        <div *ngIf="userService.user$ | async; then authenticated">
+            <!-- placeholder for ng-template -->
+        </div>
+
+        <ng-template #authenticated>
+            <!-- Add to team button -->
+            <button type="button" class="btn btn-secondary" id="add-to-team-button">Add to team</button>
+        </ng-template>
+
+    </div>
+</div>
+<br>
+
+<!-- Controls for pagination -->
+<pagination-controls (pageChange)="page = $event; pokemon = []; getPokemon()"></pagination-controls>

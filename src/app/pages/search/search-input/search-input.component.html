@@ -1,0 +1,59 @@
+<!-- Input group class -->
+<div class="input-group rounded col-8 col-sm-8 col-md-8 col-lg-8 mx-auto">
+
+    <!-- Input field -->
+    <input type="text" #box class="form-control rounded" id="search-query" placeholder="Search for a Pokemon!"
+        aria-label="Search">&nbsp;&nbsp;
+
+    <!-- "Find" Button -->
+    <button (click)="getSearchedPokemon(box.value); toggleShow()" class="input-group-text border-0" id="search-btn">
+        <i class="fa fa-search" alt="button" value="search" aria-hidden="true" type="button"></i>&nbsp;Find
+    </button>
+</div>
+
+<!-- Hidden container displays -->
+<div *ngIf="pokemon;else notPokemon" class="pokemon-card-container my-5" id="pokemon-card">
+    <br>
+    <div class="image-container text-center">
+        <!-- Image -->
+        <div *ngIf="pokemon.sprites.other.dream_world.front_default; else other_sprite">
+            <img [src]="pokemon.sprites.other.dream_world.front_default" alt="Pokemon" id="dream_sprite">
+        </div>
+        <ng-template #other_sprite><img [src]="pokemon.sprites.front_default" alt="Pokemon" id="default_sprite">
+        </ng-template>
+    </div>
+    <div class="detail-container">
+        <div class="name-container">
+            <!-- Name -->
+            <h2 class="name text-center my-3" id="update-name">{{pokemon.name.charAt(0).toUpperCase() +
+                pokemon.name.slice(1)}}
+            </h2>
+        </div>
+        <div class="type-container">
+            <!-- Type -->
+            <h5 class="type text-center my-3" id="update-type"><strong>Type</strong>:
+                {{pokemon.types[0].type.name.charAt(0).toUpperCase() + pokemon.types[0].type.name.slice(1)}}
+            </h5>
+        </div>
+        <div class="height-container">
+            <!-- Height -->
+            <h5 class="type text-center my-3" id="update-height"><strong>Height</strong>: {{pokemon.height}}
+            </h5>
+        </div>
+        <div class="health-container">
+            <!-- Health -->
+            <h5 class="type text-center my-3" id="update-health"><strong>Health</strong>: {{pokemon.stats[0].base_stat}}
+
+            </h5>
+        </div>
+        <div class="attack-power-container">
+            <!-- Att. Power -->
+            <h5 class="type text-center my-3" id="update-attPow"><strong>Att Power</strong>:
+                {{pokemon.stats[1].base_stat}}
+            </h5>
+        </div>
+    </div>
+</div>
+<ng-template #notPokemon>
+    <!-- Possibly fill in later -->
+</ng-template>

@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Justin Harrison">
+    <meta name="description" content="About page">
+    <meta name="keywords" content="HTML, CSS, About">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- App Specific CSS -->
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+
+    <!-- Font Awesome -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <title>PokeIndex</title>
+    <link rel="icon" type="image/png" href="/img/pokeball-icon.png">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Bootstrap Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html"><img src="img/pokeball-icon.png" alt="Cloud logo" width="30px"
+                    height="30px">&nbsp;&nbsp;PokeIndex</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Pokemon
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item btn btn-secondary" href="searchPokemon.html">Search</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Title -->
+    <section class="title">
+        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+            <h1 class="display-4">About PokeIndex</h1>
+            <p class="lead"><a href="#potential-applications">Jump to Potential Applications</a></p>
+        </div>
+    </section>
+
+    <!-- Container of columns -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Welcome!</h2>
+                <p>Welcome to PokeIndex! We are a service that helps you explore all things Pokemon! Whether you are
+                    looking to learn about new pokemon, or dive deeper into the details pokemon you're already familiar
+                    with, our goal is to make the
+                    process as enjoyable as possible for you
+                </p>
+                <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>Why</h2>
+                <p>Pokemon has been around for twenty five years and it is still very popular among game enthusiasts.
+                    There are plenty of PokeDex applications out there that offer many features! Our aim at PokeIndex is
+                    to provide a minimal, simplistic, and plesant to use web application. We've noticed that many
+                    applications are cluttered with ads and offer a confusing amount of futures that often overwhelms
+                    the user. Not here!</p>
+                <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>How</h2>
+                <p>To go into more detail of how PokeIndex works, it's important to point out that we do not update the
+                    database of Pokemon ourselves. We are currently using a restful Pokemon API that provides all of the
+                    Pokemon for us. Our job is to organize this data into information that is readable to the
+                    user.</p>
+                <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Images -->
+    <div class="images">
+        <section class="container-about-image-one">
+            <img src="img/charizard-about.png" alt="Charizard" width="400px"><br>
+            <cite><a href="https://bulbapedia.bulbagarden.net/wiki/Charizard_(Pok%C3%A9mon)">Charizard</a> from
+                Bulapedia</cite>
+        </section>
+    </div>
+
+    <!-- "Potential Applications" section -->
+    <section class="other-info">
+        <div class="container">
+            <h2 id="potential-applications">Potential Applications</h2>
+            <p>I would now like to discuss some potential web applications that can be developed to work alongside
+                PokeIndex. Keep in mind, these applications are not set in stone and are subject to change. The idea is
+                for these apps to work alongside one another to provide an enjoyable experience for the user that is
+                researching information about his/her favorite video games.
+            </p>
+            <ul>
+                <li>A <strong>music player</strong> would be a great candidate to pair alongside PokeIndex. This
+                    would be a service that would play anonymous music tracks depending on the genre the user chooses.
+                    Additionally, this service would be able to provide sound effects for PokeIndex when the user clicks
+                    on a Pokemon's sprite.
+                </li>
+                <li>Another great application that could be implemented would be a <strong>wiki app</strong> for a
+                    particular Pokemon
+                    game. PokeIndex focuses on the details of a pokemon in every generation, but a wiki would offer a
+                    walkthrough and details about the game as a whole. This could work together well with PokeIndex.
+                </li>
+                <li>Finally, we have a <strong>screen time</strong> service. This could be very helpful for players that
+                    spend too much time playing video games. Pokemon is known to be a quite addicting game. This app
+                    would allow the user to set timers and record data according to how long a particular game has been
+                    played.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Images -->
+    <div class="images">
+        <section class="container-about-image-two">
+            <img src="img/blastoise-about.png" alt="Blastoise" width="350px">
+            <cite><a href="https://bulbapedia.bulbagarden.net/wiki/Blastoise_(Pok%C3%A9mon)">Blastoise</a> from
+                Bulapedia</cite>
+        </section>
+    </div>
+
+    <!-- "Info That May Interest You" section -->
+    <section class="last-section">
+        <div class="container">
+            <h2 id="other-information">Other Information That May Interest You</h2>
+            <ul>
+                <li>
+                    Why are<a
+                        href="https://www.health.harvard.edu/blog/the-health-effects-of-too-much-gaming-2020122221645"
+                        target="_blank">
+                        prolonged periods of gaming</a> bad for you?
+                </li>
+                <li>
+                    What <a
+                        href="https://www.geico.com/living/home/technology/9-reasons-to-give-video-games-a-try/"
+                        target="_blank">
+                        benefits</a> does gaming have?
+                </li>
+                <li>
+                    The <a href="https://www.economist.com/prospero/2016/02/28/the-legacy-of-pokemon-for-millennials" target="_blank">
+                        legacy</a> pokemon has left us.
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="images">
+        <section class="container-about-image-three">
+            <img src="img/venusaur-about.png" alt="Bulbasaur" width="400px">
+            <cite><a href="https://bulbapedia.bulbagarden.net/wiki/Venusaur_(Pok%C3%A9mon)">Venusaur</a> from
+                Bulapedia</cite>
+        </section>
+    </div>
+
+    <!-- Page footer -->
+    <footer class="container py-5">
+        <hr>
+        <br>
+        <div class="row">
+            <div class="col-12 col-md">
+                <img src="img/pokeball-icon.png" alt="Cloud logo" width="30px" height="30px">
+                <small class="d-block mb-3 text-muted">&copy; 2021 Justin Harrison</small>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Features</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="searchPokemon.html">Pokemon Search</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Resources</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="#">Resource</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>About</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="#">Me</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

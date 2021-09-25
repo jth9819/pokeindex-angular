@@ -1,0 +1,38 @@
+.navbar-brand img {
+    margin-bottom: 4px;
+}
+
+.nav-item {
+    margin-bottom: 2px;
+    margin-left: -18px;
+}
+
+.btn {
+    color:#a1a1a1;
+    font-size: 17.5px;
+}
+
+#dropdownBasic1 {
+    box-shadow: none;
+    background-color: transparent;
+}
+
+#search-button {
+    color:#333;
+}
+
+#list-button {
+    color:#333;
+}
+
+#search-button:active {
+    color:white;
+}
+
+#list-button:active {
+    color:white;
+}
+
+.btn:hover{
+    color:lightgray;
+}
