@@ -1,14 +1,14 @@
-# Installation and Execution
-
-- Run `npm install`.
-- Run `npm start`.
-- Navigate to `http://localhost:4200/` in a browser.
-
 # About the Project
 
 This application was developed for a project in my clientside programming course. The majority of the project design and architecture was built with prior knowledge from past assignments in the course. This application was developed mainly on my own, but towards the end of the semester the instructor reccomended we team up with one other classmate to add the final features/touches.
 
 The name of our application is _Pokéindex_. The idea of this application is to allow users to search for Pokemon and view general information about them. Secondly, as a new feature we have added the ability to browse Pokemon by pages in a list view. Our _home page_ has one main card that directs the user to the _search page_ & _browse page_. An _about page_ is included as well in case the user wants more info about _PokeIndex_.
+
+# Installation and Execution
+
+- Run `npm install`.
+- Run `npm start`.
+- Navigate to `http://localhost:4200/` in a browser.
 
 # Contributions
 
